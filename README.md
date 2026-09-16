@@ -1,16 +1,57 @@
-# React + Vite
+# To-Do List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple, clean to-do list application built with React and Vite as part of my transition into frontend development.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [Add your GitHub Pages link here](https://oliver-sampa.github.io/todo-list-app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- ✅ Add new tasks
+- 🗑️ Delete tasks
+- ☑️ Mark tasks as complete
+- ✏️ Edit existing tasks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+- **React** – UI library for building the interface
+- **Vite** – fast build tool and dev server
+- **JavaScript (ES6+)**
+- **CSS**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting Started
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Oliver-Sampa/todo-list-app.git
+
+# Navigate into the project folder
+cd todo-list-app/my-todo
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The app will be running at `http://localhost:5173` (or the port Vite assigns).
+
+## What I Learned
+
+This project was built while completing my React coursework, applying core concepts like:
+
+- Component structure and reusability
+- Managing state with React hooks
+- Handling user events (add, edit, delete, complete)
+- Working with Git and GitHub for version control
+
+## Author
+
+**Oliver Sampa**
+Transitioning into frontend development after 10+ years in a different field.
+
+---
+
+*This is a learning project built to practice React fundamentals.*
