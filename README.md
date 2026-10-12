@@ -2,21 +2,24 @@
 
 A simple, clean to-do list application built with React and Vite as part of my transition into frontend development.
 
-🔗 **Live Demo:** [Add your GitHub Pages link here](https://oliver-sampa.github.io/todo-list-app/)
+🔗 **Live Demo:** [todo-list-app-sandy-nine.vercel.app](https://todo-list-app-sandy-nine.vercel.app)
+<img width="1348" height="613" alt="To-do list app screenshot" src="https://github.com/user-attachments/assets/a3865ae7-838e-4a18-809c-b6a58e0d3a62" />
+
 
 ## Features
 
 - ✅ Add new tasks
 - 🗑️ Delete tasks
 - ☑️ Mark tasks as complete
-- ✏️ Edit existing tasks
+  
 
 ## Tech Stack
 
 - **React** – UI library for building the interface
 - **Vite** – fast build tool and dev server
 - **JavaScript (ES6+)**
-- **CSS**
+- styled-components – component-level styling
+- uuid – unique IDs for each task
 
 ## Getting Started
 
@@ -44,12 +47,13 @@ This project was built while completing my React coursework, applying core conce
 
 - Component structure and reusability
 - Managing state with React hooks
-- Handling user events (add, edit, delete, complete)
+  - Handling user events
 - Working with Git and GitHub for version control
 
 ## Author
 
 **Oliver Sampa**
+
 Transitioning into frontend development after 10+ years in a different field.
 
 ---
