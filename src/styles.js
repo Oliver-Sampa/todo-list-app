@@ -5,8 +5,9 @@ import { FcCheckmark, FcEmptyTrash } from 'react-icons/fc'
 
 export const Container = styled.div`
   background: linear-gradient(90deg, #383838 0%, #000000 81.25%);
-  width: 100vh;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;

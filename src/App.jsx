@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GlobalStyle from "./GlobalStyles";
 import { v4 as uuid } from "uuid";
 import {
   Container,
@@ -9,22 +10,16 @@ import {
   Check,
   Trash,
 } from "./styles";
-//import { FcCheckmark, FcEmptyTrash } from 'react-icons/fc'
-import "./App.css";
 
 function App() {
   const [list, setList] = useState([]);
-    
-    
-  
-
   const [inputTask, setInputTask] = useState("");
 
-  function inputMudou(event) {
+  function handleInputChange(event) {
     setInputTask(event.target.value);
   }
 
-  function cliqueNoBotao() {
+  function handleAddTask() {
     if (!inputTask.trim()) return;
     setList([...list, { id: uuid(), task: inputTask, finished: false }]);
     setInputTask("");
@@ -42,30 +37,35 @@ function App() {
   }
 
   return (
-    <Container>
-      <ToDoList>
-        <Input
-          value={inputTask}
-          onChange={inputMudou}
-          placeholder="Task to do "
-        />
-        <Button onClick={cliqueNoBotao}>Adicionar</Button>
+    <>
+      <GlobalStyle />
+      <Container>
+        <ToDoList>
+          <h1>My To-Do List</h1>
+          <Input
+            value={inputTask}
+            onChange={handleInputChange}
+            placeholder="Task to do"
+          />
 
-        <ul>
-          {list.length > 0 ? (
-            list.map((item) => (
-              <ListItem isFinished={item.finished} key={item.id}>
-                <Check onClick={() => finishTask(item.id)} />
-                <span>{item.task}</span>
-                <Trash onClick={() => deleteTask(item.id)} />
-              </ListItem>
-            ))
-          ) : (
-            <h3> No items on the list</h3>
-          )}
-        </ul>
-      </ToDoList>
-    </Container>
+          <Button onClick={handleAddTask}>Add</Button>
+
+          <ul>
+            {list.length > 0 ? (
+              list.map((item) => (
+                <ListItem isFinished={item.finished} key={item.id}>
+                  <Check onClick={() => finishTask(item.id)} />
+                  <span>{item.task}</span>
+                  <Trash onClick={() => deleteTask(item.id)} />
+                </ListItem>
+              ))
+            ) : (
+              <h3> No items on the list</h3>
+            )}
+          </ul>
+        </ToDoList>
+      </Container>
+    </>
   );
 }
 
